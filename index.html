@@ -297,59 +297,61 @@
         </div>
 
         <script>
-            let width = window.innerWidth
-            let height = window.innerHeight
-            let x
+            setInterval(function myFunction(){
+                let width = window.innerWidth
+                let height = window.innerHeight
+                let x
 
-            if (height - width >= 0) {
-                x = true
-            }
-            else if (height - width < 0) {
-                x = false
-            }
+                if (height - width >= 0) {
+                    x = true
+                }
+                else if (height - width < 0) {
+                    x = false
+                }
 
-            if (x == true) {
-                document.body.style.setProperty('--fontSize', '2vw');
-                document.body.style.setProperty('--fontSizeHeading', '5vw');
-                document.body.style.setProperty('--fontSizeTitle', '10vw');
+                if (x == true) {
+                    document.body.style.setProperty('--fontSize', '2vw');
+                    document.body.style.setProperty('--fontSizeHeading', '5vw');
+                    document.body.style.setProperty('--fontSizeTitle', '10vw');
 
-                document.body.style.setProperty('--fontSizeOverlay', '1.5vw');
-                document.body.style.setProperty('--overlaySize', '20.5vw');
-                document.body.style.setProperty('--overlayTransform', '+1vw');
-                document.body.style.setProperty('--textTransform', '-23.5vw');
+                    document.body.style.setProperty('--fontSizeOverlay', '1.5vw');
+                    document.body.style.setProperty('--overlaySize', '20.5vw');
+                    document.body.style.setProperty('--overlayTransform', '+1vw');
+                    document.body.style.setProperty('--textTransform', '-23.5vw');
 
-                document.body.style.setProperty('--marginSmall', '5%');
-                document.body.style.setProperty('--marginLarge', '10%');
+                    document.body.style.setProperty('--marginSmall', '5%');
+                    document.body.style.setProperty('--marginLarge', '10%');
 
-                document.body.style.setProperty('--columnWidth', '25%');
+                    document.body.style.setProperty('--columnWidth', '25%');
 
-                document.body.style.setProperty('--borderWidth', '1vw');
+                    document.body.style.setProperty('--borderWidth', '1vw');
 
-                document.body.style.setProperty('--gap', '10%');
+                    document.body.style.setProperty('--gap', '10%');
 
-                document.body.style.setProperty('--top', '5%');
-            }
-            else if (x == false) {
-                document.body.style.setProperty('--fontSize', '1vw');
-                document.body.style.setProperty('--fontSizeHeading', '2.5vw');
-                document.body.style.setProperty('--fontSizeTitle', '5vw');
+                    document.body.style.setProperty('--top', '5%');
+                }
+                else if (x == false) {
+                    document.body.style.setProperty('--fontSize', '1vw');
+                    document.body.style.setProperty('--fontSizeHeading', '2.5vw');
+                    document.body.style.setProperty('--fontSizeTitle', '5vw');
 
-                document.body.style.setProperty('--fontSizeOverlay', '.75vw');
-                document.body.style.setProperty('--overlaySize', '10.25vw');
-                document.body.style.setProperty('--overlayTransform', '+.5vw');
-                document.body.style.setProperty('--textTransform', '-11.75vw');
+                    document.body.style.setProperty('--fontSizeOverlay', '.75vw');
+                    document.body.style.setProperty('--overlaySize', '10.25vw');
+                    document.body.style.setProperty('--overlayTransform', '+.5vw');
+                    document.body.style.setProperty('--textTransform', '-11.75vw');
 
-                document.body.style.setProperty('--marginSmall', '2.5%');
-                document.body.style.setProperty('--marginLarge', '5%');
+                    document.body.style.setProperty('--marginSmall', '2.5%');
+                    document.body.style.setProperty('--marginLarge', '5%');
 
-                document.body.style.setProperty('--columnWidth', '12.5%');
+                    document.body.style.setProperty('--columnWidth', '12.5%');
 
-                document.body.style.setProperty('--borderWidth', '.5vw');
+                    document.body.style.setProperty('--borderWidth', '.5vw');
 
-                document.body.style.setProperty('--gap', '5%');
+                    document.body.style.setProperty('--gap', '5%');
 
-                document.body.style.setProperty('--top', '2.5%');
-            }
+                    document.body.style.setProperty('--top', '2.5%');
+                }
+            }, 0);
         </script>
     </body>
 </html>
