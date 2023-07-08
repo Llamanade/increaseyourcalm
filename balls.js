@@ -2,6 +2,11 @@ let bubble = [];
 let n = 2000;
 let s = 5
 let angle, dx, dy
+let i = 0
+let words = ''
+let fade = 0
+let fadeAmount = 2
+let show = false
 
 function setup() {
   createCanvas(window.innerWidth - 20, window.innerHeight - 60);
@@ -25,6 +30,37 @@ function setup() {
   }
   document.querySelector("#nBalls").value = 100
   document.querySelector("#sBalls").value = 5
+
+  switch (i) {
+    case 0:
+      words = 'Sometimes it is helpful to let your mind rest and focus on something else.';
+      i++;
+      break;
+    case 1:
+      words = 'Focus on here and now.';
+      i++;
+      break;
+    case 2:
+      words = 'Watch the bubbles as they float across the screen.';
+      i++;
+      break;
+    case 3:
+      words = 'If you\'d like, you can pop the bubbles by clicking on them.';
+      i++;
+      break;
+  }
+
+  if (i == 4) {
+    i = 0;
+  }
+
+
+  if (fade == 255) {
+    show = true
+  }
+  else if (fade == 0) {
+    show = false
+  }
 }
 
 function draw() {
@@ -75,6 +111,26 @@ function draw() {
     bubble[i].x = constrain(bubble[i].x, 0, window.innerWidth)
     bubble[i].y = constrain(bubble[i].y, 0, window.innerHeight)
   }
+
+  textSize(30)
+  fill(255, 255, 255, fade)
+  textAlign(CENTER);
+  text(words, window.innerWidth / 2, window.innerHeight / 2,);
+
+  if (show == true) {
+    fade -= fadeAmount
+  }
+  else if (show == false) {
+    fade += fadeAmount
+  }
+
+  if (fade < 0) {
+    fade = 0
+  }
+  else if (fade > 255) {
+    fade = 255
+  }
+  
 }
 
 function mousePressed() {
@@ -92,3 +148,37 @@ function mousePressed() {
   }
   
 }
+
+setInterval(function myFunction(){
+  switch (i) {
+    case 0:
+      words = 'Sometimes it is helpful to let your mind rest and focus on something else.';
+      i++;
+      break;
+    case 1:
+      words = 'Focus on here and now.';
+      i++;
+      break;
+    case 2:
+      words = 'Watch the bubbles as they float across the screen.';
+      i++;
+      break;
+    case 3:
+      words = 'If you\'d like, you can pop the bubbles by clicking on them.';
+      i++;
+      break;
+  }
+
+  if (i == 4) {
+    i = 0;
+  }
+}, 12000)
+
+setInterval(function myFunction(){
+  if (fade == 255) {
+    show = true
+  }
+  else if (fade == 0) {
+    show = false
+  }
+}, 6000)

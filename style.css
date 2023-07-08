@@ -13,6 +13,7 @@ body{
     --fontSize: 2vw;
     --fontSizeTitle: 10vw;
     --fontSizeHeading: 5vw;
+    --fontSizeFront: 3vw;
     --fontSizeOverlay: 1.5vw;
     --overlaySize: 20.5vw;
     --overlayTransform: +1vw;
@@ -75,7 +76,7 @@ canvas{
     grid-auto-columns: var(--columnWidth);
     gap: var(--gap);
 
-    margin-left: var(--marginLarge);
+    margin-left: var(--marginSmall);
     margin-right: auto;
     margin-bottom: var(--top);
 
@@ -90,9 +91,8 @@ canvas{
 }
 
 h1{
+    text-align: center;
     margin-top: var(--top);
-    margin-left: var(--marginSmall);
-    margin-right: auto;
     font-size: var(--fontSizeHeading);
 }
 
@@ -104,7 +104,7 @@ h1 span{
 }
 
 h2{
-    margin-left: var(--marginLarge);
+    margin-left: var(--marginSmall);
     margin-right: auto;
     font-size: var(--fontSize);
 }
@@ -138,6 +138,21 @@ h4{
 }
 
 h4 span{
+    background-color: white;
+    border-radius: var(--borderWidth);
+    padding-left: 1%;
+    padding-right: 1%;
+}
+
+h5{
+    text-align: center;
+    margin-top: var(--top);
+    font-size: var(--fontSizeFront);
+    padding-left: 10vw;
+    padding-right: 10vw;
+}
+
+h5 span{
     background-color: white;
     border-radius: var(--borderWidth);
     padding-left: 1%;
@@ -185,3 +200,40 @@ a:hover .overlay {
     padding-left: 1%;
     padding-right: 1%;
 }
+
+.sidenav {
+    height: 100%; 
+    width: 0;
+    position: fixed;
+    top: 0; 
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden; 
+    padding-top: 60px; 
+    transition: 0.5s; 
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+  }
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+#main {
+    transition: margin-left .5s;
+  }

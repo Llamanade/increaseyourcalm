@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <title>Relaxation Website</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <meta name="author" content="B Epstein-Reyes">
+        <meta name="viewport" content="width=divice-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="index.html">Home</a>
+            <a href="calmBreathing.html">Calm Breathing</a>
+            <a href="pmr.html">Progressive Muscle Relaxation</a>
+            <a href="soundscapes.html">Soundscapes</a>
+            <a href="distractYourThoughts.html">Distract Your Thoughts</a>
+            <a href="SesameStreet.html">Sesame Street and Headspace: Monster Meditations</a>
+            <a href="mindfulness.html">Mindfulness</a>
+            <a href="imagery.html">Guided Imagery</a>
+            <a href="meditation.html">Meditation</a>
+            <a href="calmingDown.html">Calming Down When You're Frustrated</a>
+          </div>
+
+          <span style="font-size:30px;cursor:pointer"; onclick="openNav()">Menu</span>
+
+        <div id="main">
+            <h1><span>Sesame Street and Headspace: Monster Meditations</span></h1>
+            <div class="resources">
+                <a href="https://www.youtube.com/watch?v=J9nE4RE8uiQ">
+                    <img class="image" src="images/image20.jpg">
+                    <div class="overlay">
+                        <div class="text">This video helps kids learn how to use meditation when they get frustrated by playing a version of “I Spy” using the 5 senses. Cookie Monster can’t wait for his cookies to be done baking! His friend, Mr. Andy from Headspace, helps him with a Monster Meditation. The viewer can join Cookie Monster and Mr. Andy in a game of “I-Sense,” and find out how they can make waiting more fun!</div>
+                    </div>
+                    <h4>Sesame Street Monster Meditation #1: “I Sense” with Cookie Monster and Headspace</h4>
+                </a>
+                <a href="https://www.youtube.com/watch?v=yhRWp0wOLyo">
+                    <img class="image" src="images/image14.jpg">
+                    <div class="overlay">
+                        <div class="text">You can get ready for
+                            bedtime by saying goodnight to the different parts of
+                            your body! Elmo can’t fall asleep, and he learns to use
+                            monster meditation to help himself calm down to help
+                            get ready for bed. He takes soothing belly breaths and
+                            plays Goodnight Body (like progressive muscle
+                            relaxation) by wiggling each part of his body and relaxing it, to say goodnight to
+                            each part of his body.</div>
+                    </div>
+                    <h4>Sesame Street Monster Meditation #2: “Goodnight Body” with Elmo and Headspace.</h4>
+                </a>
+                <a href="https://www.youtube.com/watch?v=T6XDe9jPfrI">
+                    <img class="image" src="images/image8.jpg">
+                    <div class="overlay">
+                        <div class="text">You can use a
+                            focus rhyme to focus on one task at a time, when you have
+                            so much to do! You start with belly breaths, and then say a
+                            rhyme to help you focus: “When you have so much to do,
+                            breathe in, breathe out do a rhyme, count one, two, then you
+                            do!</div>
+                    </div>
+                    <h4>Sesame Street Monster Meditation #3: Focus Rhyme with Grover and Headspace.</h4>
+                </a>
+                <a href="https://www.youtube.com/watch?v=mQAWSXQ1xOU">
+                    <img class="image" src="images/image17.jpg">
+                    <div class="overlay">
+                        <div class="text">Two-Headed Monster learns that when you’re
+                            feeling frustrated, it can help sometimes to take a
+                            break and blow out your imaginary candle before
+                            trying to do something. When you’re feeling
+                            frustrated, take a breath before you try again (like
+                            when their block tower fell over), take monster
+                            meditation belly breaths, so they can build the tower
+                            again.</div>
+                    </div>
+                    <h4>Sesame Street Monster Meditation #4: Try, Try Again with Two-Headed Monster and Headspace</h4>
+                </a>
+                <a href="https://www.youtube.com/watch?v=-N1Xm4pIeAg">
+                    <img class="image" src="images/image1.jpg">
+                    <div class="overlay">
+                        <div class="text">With a little bit of teamwork,
+                            Rosita can get ready for her first day of school! So when
+                            you’re feeling nervous, grab a buddy. Rosita doesn’t
+                            want to go to school because she is too anxious. She
+                            learns how to do belly breathing with her arms up over
+                            her head, focusing on her breaths when she’s anxious, with Carmen on her belly.</div>
+                    </div>
+                    <h4>Sesame Street Monster Meditation #5: Belly Buddy Breathing with Rosita and Headspace</h4>
+                </a>
+                <a href="https://www.youtube.com/watch?v=_mh12qNHbgk">
+                    <img class="image" src="images/image2.jpg">
+                    <div class="overlay">
+                        <div class="text">Play 123 Freeze with Elmo and his friend
+                            Mr. Andy from Headspace! When you’re feeling
+                            disappointed, this monster meditation can help you, like
+                            when things don’t work out the way you planned. You do
+                            belly breathing, then do 1-2-3 Freeze (take 3 steps and
+                            call out what you see; then repeat).</div>
+                    </div>
+                    <h4>Sesame Street Monster Meditation #6: Play 123 Freeze with Elmo and Headspace</h4>
+                </a>
+            </div>
+        </div>
+
+
+        <script>
+            setInterval(function myFunction(){
+                let width = window.innerWidth
+                let height = window.innerHeight
+                let x
+
+                if (height >= width) {
+                    x = true
+                }
+                else if (height < width) {
+                    x = false
+                }
+
+                if (x == true) {
+                    document.body.style.setProperty('--fontSize', '2vw');
+                    document.body.style.setProperty('--fontSizeHeading', '5vw');
+                    document.body.style.setProperty('--fontSizeTitle', '10vw');
+
+                    document.body.style.setProperty('--fontSizeOverlay', '1.5vw');
+                    document.body.style.setProperty('--overlaySize', '23vw');
+                    document.body.style.setProperty('--overlayTransform', '+1vw');
+                    document.body.style.setProperty('--textTransform', '-24vw');
+
+                    document.body.style.setProperty('--marginSmall', '5%');
+
+                    document.body.style.setProperty('--columnWidth', '25%');
+
+                    document.body.style.setProperty('--borderWidth', '1vw');
+
+                    document.body.style.setProperty('--gap', '10%');
+
+                    document.body.style.setProperty('--top', '5%');
+                    if (nav == true) {
+                        document.body.style.setProperty('--fontSize', '2vw');
+                        document.body.style.setProperty('--fontSizeHeading', '5vw');
+                        document.body.style.setProperty('--fontSizeTitle', '10vw');
+
+                        document.body.style.setProperty('--fontSizeOverlay', '1vw');
+                        document.body.style.setProperty('--overlaySize', '18vw');
+                        document.body.style.setProperty('--overlayTransform', '.5vw');
+                        document.body.style.setProperty('--textTransform', '-18vw');
+
+                        document.body.style.setProperty('--marginSmall', '2.83%');
+
+                        document.body.style.setProperty('--borderWidth', '.57vw');
+
+                        document.body.style.setProperty('--top', '2.83%');
+                    }
+                }
+                else if (x == false) {
+                    document.body.style.setProperty('--fontSize', '1vw');
+                    document.body.style.setProperty('--fontSizeHeading', '2.5vw');
+                    document.body.style.setProperty('--fontSizeTitle', '5vw');
+
+                    document.body.style.setProperty('--fontSizeOverlay', '.75vw');
+                    document.body.style.setProperty('--overlaySize', '11.5vw');
+                    document.body.style.setProperty('--overlayTransform', '+.5vw');
+                    document.body.style.setProperty('--textTransform', '-12vw');
+
+                    document.body.style.setProperty('--marginSmall', '2.5%');
+
+                    document.body.style.setProperty('--columnWidth', '12.5%');
+
+                    document.body.style.setProperty('--borderWidth', '.5vw');
+
+                    document.body.style.setProperty('--gap', '5%');
+
+                    document.body.style.setProperty('--top', '2.5%');
+                    if (nav == true) {
+                        document.body.style.setProperty('--fontSize', '1vw');
+                        document.body.style.setProperty('--fontSizeHeading', '2.5vw');
+                        document.body.style.setProperty('--fontSizeTitle', '5vw');
+
+                        document.body.style.setProperty('--fontSizeOverlay', '.5vw');
+                        document.body.style.setProperty('--overlaySize', '9vw');
+                        document.body.style.setProperty('--overlayTransform', '.25vw');
+                        document.body.style.setProperty('--textTransform', '-9vw');
+
+                        document.body.style.setProperty('--marginSmall', '1.41%');
+
+                        document.body.style.setProperty('--borderWidth', '.283vw');
+
+                        document.body.style.setProperty('--top', '1.41%');
+                    }
+                }
+            }, 0);
+
+            function openNav() {
+                nav = true
+                document.getElementById("mySidenav").style.width = "25vw";
+                document.getElementById("main").style.marginLeft = "25vw";
+            }
+            function closeNav() {
+                nav = false
+                document.getElementById("mySidenav").style.width = "0";
+                document.getElementById("main").style.marginLeft = "0px";
+            }
+        </script>
+    </body>
+</html>
