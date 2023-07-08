@@ -10,20 +10,20 @@ button{
 }
 
 body{
-    /*
-    background-image: url(/images/lake.jpg);
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: center;
-    background-size: cover;
-    */
-    background: linear-gradient(coral, wheat);
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-}
-
-h1{
-    background: linear-gradient(coral, wheat);
+    --fontSize: 2vw;
+    --fontSizeTitle: 10vw;
+    --fontSizeHeading: 5vw;
+    --fontSizeOverlay: 1.5vw;
+    --overlaySize: 20.5vw;
+    --overlayTransform: +1vw;
+    --textTransform: -23.5vw;
+    --columnWidth: 25%;
+    --borderWidth: 1vw;
+    --gap: 10%;
+    --top: 5%;
+    --marginSmall: 5%;
+    --marginLarge: 10%;
+    background: linear-gradient(lightblue, white);
     background-repeat: no-repeat;
     background-attachment: fixed;
 }
@@ -38,7 +38,7 @@ canvas{
 
 .image{
     width: 100%;
-    border: 1vw solid black;
+    border: var(--borderWidth) solid black;
     border-radius: 10%;
     transition: .5s ease;
 }
@@ -46,11 +46,11 @@ canvas{
 .focusedBreathing{
     display: grid;
     grid-auto-flow: column;
-    grid-auto-columns: 25%;
-    gap: 10%;
+    grid-auto-columns: var(--columnWidth);
+    gap: var(--gap);
 
-    padding-left: 5%;
-    padding-right: 5%;
+    margin-left: var(--marginSmall);
+    margin-right: auto;
 
     overflow-x:auto;
     overscroll-behavior-inline: contain;
@@ -59,11 +59,11 @@ canvas{
 .relaxingVisuals{
     display: grid;
     grid-auto-flow: column;
-    grid-auto-columns: 25%;
-    gap: 10%;
+    grid-auto-columns: var(--columnWidth);
+    gap: var(--gap);
 
-    padding-left: 5%;
-    padding-right: 5%;
+    margin-left: var(--marginSmall);
+    margin-right: auto;
 
     overflow-x:auto;
     overscroll-behavior-inline: contain;
@@ -72,13 +72,12 @@ canvas{
 .resources{
     display: grid;
     grid-auto-flow: column;
-    grid-auto-columns: 25%;
-    gap: 10%;
+    grid-auto-columns: var(--columnWidth);
+    gap: var(--gap);
 
-    padding-left: 10%;
-    padding-right: 5%;
-    margin-bottom: 3%;
-    padding-bottom: .5%;
+    margin-left: var(--marginLarge);
+    margin-right: auto;
+    margin-bottom: var(--top);
 
     overflow-x:auto;
     overscroll-behavior-inline: contain;
@@ -91,26 +90,58 @@ canvas{
 }
 
 h1{
-    padding-top: 5%;
-    padding-left: 5%;
-    font-size: 5vw;
+    margin-top: var(--top);
+    margin-left: var(--marginSmall);
+    margin-right: auto;
+    font-size: var(--fontSizeHeading);
+}
+
+h1 span{
+    background-color: white;
+    border-radius: var(--borderWidth);
+    padding-left: 1%;
+    padding-right: 1%;
 }
 
 h2{
-    padding-left: 10%;
-    font-size: 2vw;
+    margin-left: var(--marginLarge);
+    margin-right: auto;
+    font-size: var(--fontSize);
+}
+
+h2 span{
+    background-color: white;
+    border-radius: var(--borderWidth);
+    padding-left: 1%;
+    padding-right: 1%;
 }
 
 h3{
-    padding-left: 5%;
-    font-size: 2vw;
+    margin-left: var(--marginSmall);
+    margin-right: auto;
+    font-size: var(--fontSize);
+}
+
+h3 span{
+    background-color: white;
+    border-radius: var(--borderWidth);
+    padding-left: 1%;
+    padding-right: 1%;
 }
 
 h4{
     text-align: center;
-    font-size: 2vw;
+    font-size: var(--fontSize);
     color: black;
-    padding-left: 1vw;
+    margin-left: var(--marginSmall);
+    margin-right: auto;
+}
+
+h4 span{
+    background-color: white;
+    border-radius: var(--borderWidth);
+    padding-left: 1%;
+    padding-right: 1%;
 }
 
 a{
@@ -123,17 +154,17 @@ a:hover .image {
 
 .overlay {
     opacity: 0;
-    width: 20.5vw;
-    transform: translate(+1vw, +1vw);
+    width: var(--overlaySize);
+    transform: translate(var(--overlayTransform), var(--overlayTransform));
     transition: .5s ease;
     background-color: white;
 }
 
 .text {
     color: black;
-    font-size: 1.5vw;
+    font-size: var(--fontSizeOverlay);
     position: absolute;
-    transform: translate(+0vw, -23vw);
+    transform: translate(+0vw, var(--textTransform));
     text-align: center;
   }
 
@@ -142,6 +173,15 @@ a:hover .overlay {
 }
 
 .title{
-    padding-left: 5%;
-    font-size: 10vw;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: var(--fontSizeTitle);
+}
+
+.title span{
+    background-color: white;
+    border-radius: var(--borderWidth);
+    padding-left: 1%;
+    padding-right: 1%;
 }

@@ -10,13 +10,12 @@ button{
 }
 
 body{
-    background: linear-gradient(coral, wheat);
+    background-color: lightblue;
     background-repeat: no-repeat;
     background-attachment: fixed;
 }
 
 h1{
-    background: linear-gradient(coral, wheat);
     background-repeat: no-repeat;
     background-attachment: fixed;
 }

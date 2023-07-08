@@ -8,9 +8,9 @@
         <meta name="viewport" content="width=divice-width, initial-scale=1.0">
     </head>
     <body>
-        <div class="title">Increase Your Calm</div>
-        <h1>Calm Breathing</h1>
-        <h3>Take control of your breathing. Breathe along with the circle and feel calm.</h3>
+        <div class="title"><span>Increase Your Calm</span></div>
+        <h1><span>Calm Breathing</span></h1>
+        <h3><span>Take control of your breathing. Breathe along with the circle and feel calm.</span></h3>
         <div class="focusedBreathing">
             <a href="simple.html">
                 <img class="image" src="images/simple-breathing.png">
@@ -21,8 +21,8 @@
             </a>
         </div>
 
-        <h1>Distract Your Thoughts</h1>
-        <h3>Sometimes it is helpful to let your mind rest and focus on something else.</h3>
+        <h1><span>Distract Your Thoughts</span></h1>
+        <h3><span>Sometimes it is helpful to let your mind rest and focus on something else.</span></h3>
         <div class="relaxingVisuals">
             <a href="balls.html">
                 <img class="image" src="images/balls.png">
@@ -33,15 +33,15 @@
             </a>
         </div>
 
-        <h1>Relaxing Places</h1>
+        <h1><span>Relaxing Places</span></h1>
         <div class="relaxingPlaces">
             
         </div>
 
-        <h1>Relaxation Videos</h1>
-        <h3>These videos can help you practice relaxation techniques</h3>
+        <h1><span>Relaxation Videos</span></h1>
+        <h3><span>These videos can help you practice relaxation techniques</span></h3>
         <br>
-        <h2>Focused Breathing</h2>
+        <h2><span>Focused Breathing</span></h2>
         <div class="resources">
             <a href="https://www.youtube.com/watch?v=Xq3DwzX6MUw">
                 <img class="image" src="images/image15.jpg">
@@ -101,7 +101,7 @@
             </a>
         </div>
 
-        <h2>Progressive Muscle Relaxation</h2>
+        <h2><span>Progressive Muscle Relaxation</span></h2>
         <div class="resources">
             <a href="https://www.youtube.com/watch?v=cDKyRpW-Yuc">
                 <img class="image" src="images/image19.jpg">
@@ -119,7 +119,7 @@
             </a>
         </div>
 
-        <h2>Sesame Street and Headspace: Monster Meditations</h2>
+        <h2><span>Sesame Street and Headspace: Monster Meditations</span></h2>
         <div class="resources">
             <a href="https://www.youtube.com/watch?v=J9nE4RE8uiQ">
                 <img class="image" src="images/image20.jpg">
@@ -194,7 +194,7 @@
             </a>
         </div>
 
-        <h2>Guided Imagery</h2>
+        <h2><span>Guided Imagery</span></h2>
         <div class="resources">
             <a href="https://www.youtube.com/watch?v=ZBnPlqQFPKs&t=91s">
                 <img class="image" src="images/image13.jpg">
@@ -207,7 +207,7 @@
             </a>
         </div>
 
-        <h2>Mindfulness</h2>
+        <h2><span>Mindfulness</span></h2>
         <div class="resources">
             <a href="https://www.youtube.com/watch?v=_mqFPTprwbk">
                 <img class="image" src="images/image6.jpg">
@@ -250,7 +250,7 @@
             </a>
         </div>
 
-        <h2>Meditation</h2>
+        <h2><span>Meditation</span></h2>
         <div class="resources">
             <a href="https://www.youtube.com/watch?v=aIC-Io441v4">
                 <img class="image" src="images/image18.png">
@@ -261,7 +261,7 @@
             </a>
         </div>
 
-        <h2>Calming Down and Frustration Tolerance</h2>
+        <h2><span>Calming Down and Frustration Tolerance</span></h2>
         <div class="resources">
             <a href="https://www.youtube.com/watch?v=V7LD2JXRsmY">
                 <img class="image" src="images/image24.jpg">
@@ -295,5 +295,61 @@
                 <h4>Calming Exercises for Kids: Breathing and Stretching</h4>
             </a>
         </div>
+
+        <script>
+            let width = window.innerWidth
+            let height = window.innerHeight
+            let x
+
+            if (height - width >= 0) {
+                x = true
+            }
+            else if (height - width < 0) {
+                x = false
+            }
+
+            if (x == true) {
+                document.body.style.setProperty('--fontSize', '2vw');
+                document.body.style.setProperty('--fontSizeHeading', '5vw');
+                document.body.style.setProperty('--fontSizeTitle', '10vw');
+
+                document.body.style.setProperty('--fontSizeOverlay', '1.5vw');
+                document.body.style.setProperty('--overlaySize', '20.5vw');
+                document.body.style.setProperty('--overlayTransform', '+1vw');
+                document.body.style.setProperty('--textTransform', '-23.5vw');
+
+                document.body.style.setProperty('--marginSmall', '5%');
+                document.body.style.setProperty('--marginLarge', '10%');
+
+                document.body.style.setProperty('--columnWidth', '25%');
+
+                document.body.style.setProperty('--borderWidth', '1vw');
+
+                document.body.style.setProperty('--gap', '10%');
+
+                document.body.style.setProperty('--top', '5%');
+            }
+            else if (x == false) {
+                document.body.style.setProperty('--fontSize', '1vw');
+                document.body.style.setProperty('--fontSizeHeading', '2.5vw');
+                document.body.style.setProperty('--fontSizeTitle', '5vw');
+
+                document.body.style.setProperty('--fontSizeOverlay', '.75vw');
+                document.body.style.setProperty('--overlaySize', '10.25vw');
+                document.body.style.setProperty('--overlayTransform', '+.5vw');
+                document.body.style.setProperty('--textTransform', '-11.75vw');
+
+                document.body.style.setProperty('--marginSmall', '2.5%');
+                document.body.style.setProperty('--marginLarge', '5%');
+
+                document.body.style.setProperty('--columnWidth', '12.5%');
+
+                document.body.style.setProperty('--borderWidth', '.5vw');
+
+                document.body.style.setProperty('--gap', '5%');
+
+                document.body.style.setProperty('--top', '2.5%');
+            }
+        </script>
     </body>
 </html>
