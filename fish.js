@@ -74,29 +74,32 @@ function draw() {
     createCanvas(window.innerWidth - 20, window.innerHeight - 60);
     background(0, 0, 75)
     image(img2, 0, 0, window.innerWidth - 20, window.innerHeight - 60)
-    for (let i = 0; i < n; i++) {
-        if (fish[i].dx > 0) {
-            push();
-            scale(1, -1)
-            image(img, fish[i].x, fish[i].y)
-            pop();
-        }
-        else {
-            image(img, fish[i].x, fish[i].y)
-        }
-        fish[i].x += fish[i].dx / 5 * s
-        fish[i].y += fish[i].dy / 5 * s
-    
-        if (fish[i].x >= window.innerWidth + img.width) {
-            fish[i].dx = Math.cos(fish[i].angle)
-        }
-        else if (fish[i].x <= 0 - img.width) {
-            fish[i].dx = 100
-        }
-        if (fish[i].y >= window.innerHeight - img.height || fish[i].y <= 0) {
-            fish[i].dy = -fish[i].dy
-        }
-  }
+
+    for (let i = 0; i < n - 1; i++) {
+      if (fish[i].dx > 0) {
+          push();
+          scale(1, -1)
+          image(img, fish[i].x, fish[i].y)
+          pop();
+      }
+      else {
+          image(img, fish[i].x, fish[i].y)
+      }
+      fish[i].x += fish[i].dx / 5 * s
+      fish[i].y += fish[i].dy / 5 * s
+  
+      if (fish[i].x >= window.innerWidth + img.width) {
+          fish[i].dx = Math.cos(fish[i].angle)
+      }
+      else if (fish[i].x <= 0 - img.width) {
+          fish[i].dx = 100
+      }
+      if (fish[i].y >= window.innerHeight - img.height || fish[i].y <= 0) {
+          fish[i].dy = -fish[i].dy
+      }
+    }
+
+    unique()
 
     let input = document.querySelector("#nFish").value
     if (input > 5000) {
@@ -116,7 +119,7 @@ function draw() {
     }
     s = input2
 
-    textSize(18)
+  textSize(30)
   fill(255, 255, 255, fade)
   textAlign(CENTER);
   text(words, window.innerWidth / 2, window.innerHeight / 2,);
@@ -157,11 +160,38 @@ setInterval(function myFunction(){
     }
   }, 12000)
   
-  setInterval(function myFunction(){
-    if (fade == 255) {
-      show = true
-    }
-    else if (fade == 0) {
-      show = false
-    }
-  }, 6000)
+setInterval(function myFunction(){
+  if (fade == 255) {
+    show = true
+  }
+  else if (fade == 0) {
+    show = false
+  }
+}, 6000)
+
+function unique() {
+  if (fish[n-1].dx > 0) {
+    push();
+    scale(1, -1)
+    tint(255, 255, 0)
+    image(img, fish[n-1].x, fish[n-1].y)
+    pop();
+  }
+  else {
+    tint(255, 255, 0)
+    image(img, fish[n-1].x, fish[n-1].y)
+  }
+  fish[n-1].x += fish[n-1].dx / 4 * s
+  fish[n-1].y += fish[n-1].dy / 4 * s
+
+  if (fish[n-1].x >= window.innerWidth + img.width) {
+      fish[n-1].dx = Math.cos(fish[n-1].angle)
+  }
+  else if (fish[n-1].x <= 0 - img.width) {
+      fish[n-1].dx = 100
+  }
+  if (fish[n-1].y >= window.innerHeight - img.height || fish[n-1].y <= 0) {
+      fish[n-1].dy = -fish[n-1].dy
+  }
+  tint(255, 255, 255)
+}

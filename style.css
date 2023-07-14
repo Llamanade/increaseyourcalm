@@ -24,6 +24,8 @@ body{
     --top: 5%;
     --marginSmall: 5%;
     --marginLarge: 10%;
+    --rows: auto auto auto;
+    --rowGap: 5%;
     background: linear-gradient(lightblue, white);
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -71,16 +73,14 @@ canvas{
 }
 
 .resources{
-    display: grid;
-    grid-auto-flow: column;
-    grid-auto-columns: var(--columnWidth);
-    gap: var(--gap);
+    display: inline-grid;
+    grid-template-columns: var(--rows);
+    column-gap: var(--gap);
+    row-gap: var(--rowGap);
 
     margin-left: var(--marginSmall);
-    margin-right: auto;
-    margin-bottom: var(--top);
+    margin-right: var(--marginSmall);
 
-    overflow-x:auto;
     overscroll-behavior-inline: contain;
 }
 
@@ -117,8 +117,7 @@ h2 span{
 }
 
 h3{
-    margin-left: var(--marginSmall);
-    margin-right: auto;
+    text-align: center;
     font-size: var(--fontSize);
 }
 
