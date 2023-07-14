@@ -121,7 +121,3 @@ function title() {
         text("for 8 seconds", width / 2, (height / 2) + (sphere.r / 15))
     }
 }
-
-function change() {
-    x++
-}

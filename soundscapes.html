@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <title>Relaxation Website</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <meta name="author" content="B Epstein-Reyes">
+        <meta name="viewport" content="width=divice-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="/">Home</a>
+            <a href="calm breathing">Calm Breathing</a>
+            <a href="progressive muscle relaxation">Progressive Muscle Relaxation</a>
+            <a href="soundscapes">Soundscapes</a>
+            <a href="distract your thoughts">Distract Your Thoughts</a>
+            <a href="Sesame Street">Sesame Street and Headspace: Monster Meditations</a>
+            <a href="mindfulness">Mindfulness</a>
+            <a href="guided imagery">Guided Imagery</a>
+            <a href="meditation">Meditation</a>
+            <a href="calming down">Calming Down When You're Frustrated</a>
+          </div>
+
+          <span style="font-size:30px;cursor:pointer"; onclick="openNav()">Menu</span>
+
+        <div id="main">
+            <h1><span>Soundscapes</span></h1>
+            <br>
+
+            <script src="soundscapes.js"></script>
+
+            <br>
+            <div class="resources">
+                <a href="https://youtu.be/WHPEKLQID4Uhttps://youtu.be/WHPEKLQID4U">
+                    <img class="image" src="images/ocean waves.png">
+                    <h4>Ocean Waves</h4>
+                </a>
+                <a href="https://youtu.be/76SKukeLqyk">
+                    <img class="image" src="images/windchimes.png">
+                    <h4>Windchimes</h4>
+                </a>
+
+                <a href="https://youtu.be/zKHJuEwzXPk">
+                    <img class="image" src="images/rain on leaves.png">
+                    <h4>Rain on Leaves</h4>
+                </a>
+                <a href="https://youtu.be/f_5KW7OR6rw">
+                    <img class="image" src="images/babbling brook.png">
+                    <div class="overlay">
+                    </div>
+                    <h4>Babbling Brook</h4>
+                </a>
+                <a href="https://youtu.be/AWKzr6n0ea0">
+                    <img class="image" src="images/crakcling fireplace.png">
+                    <div class="overlay">
+                    </div>
+                    <h4>Crackling Fireplace</h4>
+                </a>
+                <a href="https://youtu.be/CY7t8ow2gOM">
+                    <img class="image" src="images/cat purring.png">
+                    <div class="overlay">
+                    </div>
+                    <h4>Cat Purring</h4>
+                </a>
+            </div>
+        </div>
+
+        <script>
+            setInterval(function myFunction(){
+                let width = window.innerWidth
+                let height = window.innerHeight
+                let x
+
+                if (height >= width) {
+                    x = true
+                }
+                else if (height < width) {
+                    x = false
+                }
+
+                if (x == true) {
+                    document.body.style.setProperty('--fontSize', '2.8vw');
+                    document.body.style.setProperty('--fontSizeHeading', '5vw');
+                    document.body.style.setProperty('--fontSizeTitle', '10vw');
+
+                    document.body.style.setProperty('--fontSizeOverlay', '1.5vw');
+                    document.body.style.setProperty('--overlaySize', '23vw');
+                    document.body.style.setProperty('--overlayTransform', '+1vw');
+                    document.body.style.setProperty('--textTransform', '-24vw');
+
+                    document.body.style.setProperty('--marginSmall', '5%');
+
+                    document.body.style.setProperty('--columnWidth', '25%');
+
+                    document.body.style.setProperty('--borderWidth', '1vw');
+
+                    document.body.style.setProperty('--gap', '10%');
+
+                    document.body.style.setProperty('--top', '5%');
+
+                    document.body.style.setProperty('--rows', '25% 25% 25%');
+
+                    document.body.style.setProperty('--rowGap', '5%');
+                }
+                else if (x == false) {
+                    document.body.style.setProperty('--fontSize', '1.4vw');
+                    document.body.style.setProperty('--fontSizeHeading', '2.5vw');
+                    document.body.style.setProperty('--fontSizeTitle', '5vw');
+
+                    document.body.style.setProperty('--fontSizeOverlay', '.75vw');
+                    document.body.style.setProperty('--overlaySize', '11.5vw');
+                    document.body.style.setProperty('--overlayTransform', '+.5vw');
+                    document.body.style.setProperty('--textTransform', '-12vw');
+
+                    document.body.style.setProperty('--marginSmall', '2.5%');
+
+                    document.body.style.setProperty('--columnWidth', '12.5%');
+
+                    document.body.style.setProperty('--borderWidth', '.5vw');
+
+                    document.body.style.setProperty('--gap', '5%');
+
+                    document.body.style.setProperty('--top', '2.5%');
+
+                    document.body.style.setProperty('--rows', '15% 15% 15% 15% 15%');
+
+                    document.body.style.setProperty('--rowGap', '2.5%');
+                }
+            }, 0);
+
+            function openNav() {
+                nav = true
+                document.getElementById("mySidenav").style.width = "25vw";
+                document.getElementById("main").style.marginLeft = "25vw";
+            }
+            function closeNav() {
+                nav = false
+                document.getElementById("mySidenav").style.width = "0";
+                document.getElementById("main").style.marginLeft = "0px";
+            }
+        </script>
+    </body>
+</html>
