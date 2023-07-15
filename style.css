@@ -10,6 +10,7 @@ button{
 }
 
 body{
+    font-family: 'Bree Serif', serif;
     --fontSize: 2vw;
     --fontSizeTitle: 10vw;
     --fontSizeHeading: 5vw;
@@ -26,7 +27,7 @@ body{
     --marginLarge: 10%;
     --rows: auto auto auto;
     --rowGap: 5%;
-    background: linear-gradient(lightblue, white);
+    background: linear-gradient(rgb(152, 152, 247), lightblue);
     background-repeat: no-repeat;
     background-attachment: fixed;
 }
@@ -97,7 +98,6 @@ h1{
 }
 
 h1 span{
-    background-color: white;
     border-radius: var(--borderWidth);
     padding-left: 1%;
     padding-right: 1%;
@@ -110,7 +110,6 @@ h2{
 }
 
 h2 span{
-    background-color: white;
     border-radius: var(--borderWidth);
     padding-left: 1%;
     padding-right: 1%;
@@ -122,7 +121,6 @@ h3{
 }
 
 h3 span{
-    background-color: white;
     border-radius: var(--borderWidth);
     padding-left: 1%;
     padding-right: 1%;
@@ -137,7 +135,6 @@ h4{
 }
 
 h4 span{
-    background-color: white;
     border-radius: var(--borderWidth);
     padding-left: 1%;
     padding-right: 1%;
@@ -152,7 +149,6 @@ h5{
 }
 
 h5 span{
-    background-color: white;
     border-radius: var(--borderWidth);
     padding-left: 1%;
     padding-right: 1%;
@@ -194,7 +190,6 @@ a:hover .overlay {
 }
 
 .title span{
-    background-color: white;
     border-radius: var(--borderWidth);
     padding-left: 1%;
     padding-right: 1%;

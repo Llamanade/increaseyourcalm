@@ -10,6 +10,7 @@ button{
 }
 
 body{
+    font-family: 'Bree Serif', serif;
     background-color: lightblue;
     background-repeat: no-repeat;
     background-attachment: fixed;
