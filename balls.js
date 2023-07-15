@@ -1,5 +1,5 @@
 let bubble = [];
-let n = 2000;
+let n = 5000;
 let s = 5
 let angle, dx, dy
 let i = 0
@@ -7,9 +7,20 @@ let words = ''
 let fade = 0
 let fadeAmount = 2
 let show = false
+let slider
+let width = window.innerWidth
+let height = window.innerHeight
 
 function setup() {
   createCanvas(window.innerWidth - 20, window.innerHeight - 60);
+  slider1 = createSlider(0, 2000, 100, 2);
+  slider1.position(330, 75);
+  slider1.style('width', '73%');
+
+  slider2 = createSlider(0, 100, 5, 1);
+  slider2.position(330, 100);
+  slider2.style('width', '73%');
+
   for (let i = 0; i < n; i++) {
     bubble[i] = {
       x: 1,
@@ -28,8 +39,6 @@ function setup() {
   bubble[i].y = random(0, height)
   bubble[i].angle = random(0, 360)
   }
-  document.querySelector("#nBalls").value = 100
-  document.querySelector("#sBalls").value = 5
 
   switch (i) {
     case 0:
@@ -66,6 +75,8 @@ function setup() {
 function draw() {
   createCanvas(window.innerWidth - 20, window.innerHeight - 60);
   background(0)
+  let val1 = slider1.value();
+  let val2 = slider2.value();
   for (let i = 0; i < n; i++) {
     fill(bubble[i].color.r, bubble[i].color.g, bubble[i].color.b);
     circle(bubble[i].x, bubble[i].y, bubble[i].size);
@@ -89,23 +100,9 @@ function draw() {
     }
   }
 
-  let input = document.querySelector("#nBalls").value
-  if (input > 2000) {
-    input = 2000
-    document.querySelector("#nBalls").value = 2000
-  }
-  n = input
+  n = val1
 
-  let input2 = document.querySelector("#sBalls").value
-  if (input2 > 100) {
-    input2 = 100
-    document.querySelector("#sBalls").value = 100
-  }
-  if (input2 < 0) {
-    input2 = 0
-    document.querySelector("#sBalls").value = 0
-  }
-  s = input2
+  s = val2
 
   for (let i = 0; i < bubble.length; i++) {
     bubble[i].x = constrain(bubble[i].x, 0, window.innerWidth)
@@ -129,8 +126,10 @@ function draw() {
   }
   else if (fade > 255) {
     fade = 255
-  }
-  
+  }  
+
+  document.getElementById("number").innerHTML = "Change the number of bubbles (" + n + ")"
+  document.getElementById("speed").innerHTML = "Change the speed of the bubbles (" + s + ")"
 }
 
 function mousePressed() {
@@ -143,7 +142,6 @@ function mousePressed() {
       bubble.splice(i, 1)
 
       n -= 1
-      document.querySelector("#nBalls").value = n
     }
   }
   

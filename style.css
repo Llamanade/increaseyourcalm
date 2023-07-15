@@ -27,6 +27,8 @@ body{
     --marginLarge: 10%;
     --rows: auto auto auto;
     --rowGap: 5%;
+    --copyright: 20%;
+    --cloud: 65%;
     background: linear-gradient(rgb(152, 152, 247), lightblue);
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -231,3 +233,13 @@ a:hover .overlay {
 #main {
     transition: margin-left .5s;
   }
+
+.copyright { 
+    text-align: center; 
+    padding-top: var(--copyright);
+}
+
+.cloud {
+    margin-left: var(--cloud);
+    position:absolute;
+}
