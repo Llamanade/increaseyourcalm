@@ -11,19 +11,19 @@
         <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap" rel="stylesheet">
     </head>
     <body>
-        <div id="mySidenav" class="sidenav">
-            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-            <a href="/">Home</a>
-            <a href="calm breathing">Calm Breathing</a>
-            <a href="progressive muscle relaxation">Progressive Muscle Relaxation</a>
-            <a href="soundscapes">Soundscapes</a>
-            <a href="distract your thoughts">Distract Your Thoughts</a>
-            <a href="Sesame Street">Sesame Street and Headspace: Monster Meditations</a>
-            <a href="mindfulness and meditation">Mindfulness and Meditation</a>
-            <a href="guided imagery">Guided Imagery</a>
-            <a href="meditation">Meditation</a>
-            <a href="calming down">Calming Down When You're Frustrated</a>
-          </div>
+      <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="/">Home</a>
+        <a href="focused breathing">Focused Breathing</a>
+        <a href="progressive muscle relaxation">Progressive Muscle Relaxation</a>
+        <a href="soundscapes">Soundscapes</a>
+        <a href="distract your thoughts">Distract Your Thoughts</a>
+        <a href="Sesame Street">Sesame Street and Headspace: Monster Meditations</a>
+        <a href="mindfulness and meditation">Mindfulness and Meditation</a>
+        <a href="guided imagery">Guided Imagery</a>
+        <a href="meditation">Meditation</a>
+        <a href="calming down">Calming Down When You're Frustrated</a>
+      </div>
 
           <span style="font-size:30px;cursor:pointer"; onclick="openNav()">☰ Menu</span>
 
@@ -42,83 +42,6 @@
 
         <div class="copyright">Copyright © 2023 B Epstein-Reyes</div>
 
-        <script>
-            setInterval(function myFunction(){
-                let width = window.innerWidth
-                let height = window.innerHeight
-                let x
-
-                if (height >= width) {
-                    x = true
-                }
-                else if (height < width) {
-                    x = false
-                }
-
-                if (x == true) {
-                    document.body.style.setProperty('--fontSize', '2vw');
-                    document.body.style.setProperty('--fontSizeHeading', '5vw');
-                    document.body.style.setProperty('--fontSizeTitle', '7vw');
-                    document.body.style.setProperty('--fontSizeFront', '3vw');
-
-                    document.body.style.setProperty('--fontSizeOverlay', '1.5vw');
-                    document.body.style.setProperty('--overlaySize', '24vw');
-                    document.body.style.setProperty('--overlayTransform', '+1vw');
-                    document.body.style.setProperty('--textTransform', '-23.5vw');
-
-                    document.body.style.setProperty('--marginSmall', '5%');
-                    document.body.style.setProperty('--marginLarge', '10%');
-
-                    document.body.style.setProperty('--columnWidth', '25%');
-
-                    document.body.style.setProperty('--borderWidth', '1vw');
-
-                    document.body.style.setProperty('--gap', '10%');
-
-                    document.body.style.setProperty('--top', '5%');
-
-                    document.body.style.setProperty('--rowGap', '5%');
-
-                    document.body.style.setProperty('--copyright', '10%');
-
-                    document.body.style.setProperty('--cloud', '5%');
-                }
-                else if (x == false) {
-                    document.body.style.setProperty('--fontSize', '1vw');
-                    document.body.style.setProperty('--fontSizeHeading', '2.5vw');
-                    document.body.style.setProperty('--fontSizeTitle', '5vw');
-                    document.body.style.setProperty('--fontSizeFront', '1.5vw');
-
-                    document.body.style.setProperty('--fontSizeOverlay', '.75vw');
-                    document.body.style.setProperty('--overlaySize', '10.25vw');
-                    document.body.style.setProperty('--overlayTransform', '+.5vw');
-                    document.body.style.setProperty('--textTransform', '-11.75vw');
-
-                    document.body.style.setProperty('--marginSmall', '2.5%');
-                    document.body.style.setProperty('--marginLarge', '5%');
-
-                    document.body.style.setProperty('--columnWidth', '12.5%');
-
-                    document.body.style.setProperty('--borderWidth', '.5vw');
-
-                    document.body.style.setProperty('--gap', '5%');
-
-                    document.body.style.setProperty('--top', '2.5%');
-
-                    document.body.style.setProperty('--rowGap', '2.5%');
-
-                    document.body.style.setProperty('--copyright', '6%');
-
-                    document.body.style.setProperty('--cloud', '70%');
-                }
-            }, 0);
-
-            function openNav() {
-                document.getElementById("mySidenav").style.width = "500px";
-            }
-            function closeNav() {
-                document.getElementById("mySidenav").style.width = "0";
-            }
-        </script>
+        <script src="window size.js"></script>
     </body>
 </html>

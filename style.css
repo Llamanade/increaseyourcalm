@@ -146,8 +146,8 @@ h5{
     text-align: center;
     margin-top: var(--top);
     font-size: var(--fontSizeFront);
-    padding-left: 10vw;
-    padding-right: 10vw;
+    padding-left: 5vw;
+    padding-right: 5vw;
 }
 
 h5 span{
@@ -242,4 +242,9 @@ a:hover .overlay {
 .cloud {
     margin-left: var(--cloud);
     position:absolute;
+}
+
+.main {
+    width: 100vw;
+    height: 100vw;
 }
