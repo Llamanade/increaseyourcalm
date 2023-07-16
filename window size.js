@@ -1,11 +1,11 @@
-let width = window.innerWidth
-let height = window.innerHeight
+let w = window.innerWidth
+let h = window.innerHeight
 let x
 let nav = false
 
 setInterval(function myFunction(){
-    width = window.innerWidth
-    height = window.innerHeight
+    w = window.innerWidth
+    h = window.innerHeight
 
     if (height >= width) {
         x = true
@@ -19,6 +19,7 @@ setInterval(function myFunction(){
             document.body.style.setProperty('--fontSize', '2.8vw');
             document.body.style.setProperty('--fontSizeHeading', '5vw');
             document.body.style.setProperty('--fontSizeTitle', '10vw');
+            document.body.style.setProperty('--fontSizeFront', '3vw');
 
             document.body.style.setProperty('--fontSizeOverlay', '1.4vw');
             document.body.style.setProperty('--overlaySize', '22vw');
@@ -38,6 +39,8 @@ setInterval(function myFunction(){
             document.body.style.setProperty('--rows', '25% 25% 25%');
 
             document.body.style.setProperty('--rowGap', '5%');
+
+            document.body.style.setProperty('--copyright', '15%');
         }
         else if (nav == true) {
             document.body.style.setProperty('--fontSize', '2.8vw');
@@ -60,6 +63,7 @@ setInterval(function myFunction(){
         document.body.style.setProperty('--fontSize', '1.4vw');
         document.body.style.setProperty('--fontSizeHeading', '2.5vw');
         document.body.style.setProperty('--fontSizeTitle', '5vw');
+        document.body.style.setProperty('--fontSizeFront', '1.75vw');
 
         document.body.style.setProperty('--fontSizeOverlay', '.85vw');
         document.body.style.setProperty('--overlaySize', '14vw');
@@ -79,6 +83,8 @@ setInterval(function myFunction(){
         document.body.style.setProperty('--rows', '15% 15% 15% 15% 15%');
 
         document.body.style.setProperty('--rowGap', '2.5%');
+
+        document.body.style.setProperty('--copyright', '7.5%');
         if (nav == true) {
             document.body.style.setProperty('--fontSize', '1.4vw');
             document.body.style.setProperty('--fontSizeHeading', '2.5vw');
