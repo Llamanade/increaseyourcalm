@@ -7,10 +7,10 @@ setInterval(function myFunction(){
     w = window.innerWidth
     h = window.innerHeight
 
-    if (height >= width) {
+    if (h >= w) {
         x = true
     }
-    else if (height < width) {
+    else if (h < w) {
         x = false
     }
 
